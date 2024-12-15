@@ -24,6 +24,9 @@ chown -R "${username}:${username}" "/home/${username}"
 echo "Deploying system configs..."
 rsync -a --chown=root:root etc/ /etc/
 
+# Change shell to zsh
+chsh -s "/usr/bin/zsh" "${username}"
+
 # Check if the script is running in a virtual machine
 if systemd-detect-virt | grep -vq "none"; then
   echo "Virtual machine detected; enabling WLR_RENDERER_ALLOW_SOFTWARE variable in ReGreet config..."
