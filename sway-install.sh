@@ -4,13 +4,13 @@ username="$(logname)"
 
 # Check for sudo
 if [ "$EUID" -ne 0 ]; then
-    echo "This script must be run with sudo."
-    exit 1
+  echo "This script must be run with sudo."
+  exit 1
 fi
 
 # Install the custom package list
 echo "Installing needed packages..."
-pacman -S --noconfirm --noprogressbar --needed --disable-download-timeout $(< packages-repository.txt)
+pacman -S --noconfirm --noprogressbar --needed --disable-download-timeout $(<packages-repository.txt)
 
 # Deploy user configs
 echo "Deploying user configs..."

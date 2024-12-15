@@ -13,9 +13,6 @@ set $term kitty
 # Application launcher
 set $launcher fuzzel
 
-# Application menu
-set $menu nwg-drawer
-
 # Power Menu
 set $powermenu ~/.config/sway/scripts/power_menu.sh
 
@@ -39,9 +36,6 @@ exec_always swayidle -w before-sleep "$lock"
 
     # Start your launcher
     bindsym $mod+d exec $launcher
-
-    # Menu
-    bindsym $mod+Shift+d exec $menu
 
     # Lock screen
     bindsym $mod+Escape exec $lock
