@@ -44,7 +44,7 @@ exec_always swayidle -w before-sleep "$lock"
     bindsym $mod+Shift+d exec $menu
 
     # Lock screen
-    bindsym $mod+esc exec $lock
+    bindsym $mod+Escape exec $lock
 
     # Activities
     bindsym $mod+t exec ~/.config/sway/scripts/window_switcher.sh
@@ -130,7 +130,7 @@ exec_always swayidle -w before-sleep "$lock"
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    bindsym $mod+g layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
