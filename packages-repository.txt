@@ -24,8 +24,6 @@ jq
 kitty
 mako
 network-manager-applet
-nwg-drawer
-nwg-look
 pamixer
 polkit-gnome
 slurp
