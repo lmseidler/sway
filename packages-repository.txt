@@ -5,11 +5,12 @@ awesome-terminal-fonts
 azote
 brightnessctl
 cliphist
+easyeffects
 egl-wayland
 file-roller
 fuzzel
 greetd
-greetd-regreet
+greetd-tuigreet
 grim
 gtk-engine-murrine
 gtk-layer-shell
