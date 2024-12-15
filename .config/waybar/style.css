@@ -51,7 +51,7 @@
 /* The whole bar */
 #waybar {
     background: transparent;
-    color: #e3e3ea;
+    color: #282a3a;
     background-color: @base1;
     font-family: JetBrainsMono;
     font-size: 13px;
