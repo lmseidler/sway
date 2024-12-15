@@ -10,20 +10,21 @@ input type:touchpad {
 }
 
 # Enable numlock by default
-input type:keyboard xkb_numlock enabled
+input type:keyboard xkb_numlock disabled
 
 # Set keyboard layout and variant based on current system settings
-exec_always {
-    'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
-    'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
-}
+# exec_always {
+#     'swaymsg input type:keyboard xkb_layout "$(localectl status | grep "X11 Layout" | sed -e "s/^.*X11 Layout://")"'
+#     'swaymsg input type:keyboard xkb_variant "$(localectl status | grep "X11 Variant" | sed -e "s/^.*X11 Variant://")"'
+# }
 
 # # Toggle between keyboard layouts. This example has the "us" and "gb"
 # # keyboard layouts, and uses Alt+Shift to toggle between them.
-# input "type:keyboard" {
-#     xkb_layout "us,gb"
+input "type:keyboard" {
+    xkb_layout "de"
+    xkb_variant "bone"
 #     xkb_options "grp:alt_shift_toggle"
-# }
+}
 # # Assign the same binding to "pkill -RTMIN+1 waybar" to send signal to
 # # the Waybar keyboard module (so the module shows the updated layout).
 # # This example uses Alt + left Shift.

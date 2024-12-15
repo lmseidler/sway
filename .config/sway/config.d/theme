@@ -9,7 +9,7 @@ gaps outer 0
 default_border pixel 1
 
 # Default Font
-font pango:Noto Sans Regular 10
+font pango:RobotoMono Nerd Font Medium 11
 
 # Thin borders:
 smart_borders on
@@ -22,12 +22,12 @@ for_window [shell="xdg_shell"] title_format "%title (%app_id)"
 for_window [shell="x_wayland"] title_format "%class - %title"
 
 # class                 border  bground text    indicator child_border
-client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
-client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
-client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
-client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.focused          #5294e2 #08052b #ffffff #8b8b8b   #8b8b8b
+client.focused_inactive #08052b #08052b #b0b5bd #000000   #000000
+client.unfocused        #08052b #08052b #b0b5bd #383c4a   #383c4a
+client.urgent           #e52935 #e52935 #ffffff #e1b700   #e1b700
 client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
-client.background       #F8F8F2
+client.background       #ffffff
 
 #
 # Status Bar:

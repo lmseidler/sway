@@ -3,12 +3,12 @@ set $mod Mod4
 
 # Add Vim key support
 set $left h
-set $down j
-set $up k
+set $down k
+set $up j
 set $right l
 
 # Set default terminal emulator
-set $term footclient
+set $term kitty
 
 # Application launcher
 set $launcher fuzzel
@@ -44,10 +44,10 @@ exec_always swayidle -w before-sleep "$lock"
     bindsym $mod+Shift+d exec $menu
 
     # Lock screen
-    bindsym $mod+f1 exec $lock
+    bindsym $mod+esc exec $lock
 
     # Activities
-    bindsym $mod+p exec ~/.config/sway/scripts/window_switcher.sh
+    bindsym $mod+t exec ~/.config/sway/scripts/window_switcher.sh
 
     # Move windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -55,7 +55,7 @@ exec_always swayidle -w before-sleep "$lock"
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
 #
 # Moving around:
@@ -210,7 +210,7 @@ exec_always swayidle -w before-sleep "$lock"
     bindsym $mod+n exec thunar
 
     # Launch the browser
-    bindsym $mod+o exec firefox
+    bindsym $mod+w exec firefox
 
     # Launch the clipboard manager
     bindsym $mod+Ctrl+v exec cliphist list | fuzzel -d -w 90 -l 30 -p "Select an entry to copy it to your clipboard buffer:"| cliphist decode | wl-copy
