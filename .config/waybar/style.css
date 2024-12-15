@@ -11,7 +11,7 @@
  * -------------------------------------------------------------------------- */
 
 @define-color highlight #685878 ;
-@define-color base1  #19191e ;
+@define-color base1  #282a3a ;
 
 @keyframes blink-warning {
     70% {
@@ -51,10 +51,10 @@
 /* The whole bar */
 #waybar {
     background: transparent;
-    color: #282a3a;
+    color: #ffffff;
     background-color: @base1;
-    font-family: JetBrainsMono;
-    font-size: 13px;
+    font-family: RobotoMonoNerdFont;
+    font-size: 15px;
 }
 
 /* Every modules */
