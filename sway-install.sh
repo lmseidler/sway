@@ -23,6 +23,7 @@ chown -R "${username}:${username}" "/home/${username}"
 # Deploy system configs
 echo "Deploying system configs..."
 rsync -a --chown=root:root etc/ /etc/
+rsync -a --chown=root:root usr/ /usr/
 
 # Change shell to zsh
 chsh -s "/usr/bin/zsh" "${username}"
