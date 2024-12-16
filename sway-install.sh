@@ -24,6 +24,7 @@ chown -R "${username}:${username}" "/home/${username}"
 echo "Deploying system configs..."
 rsync -a --chown=root:root etc/ /etc/
 rsync -a --chown=root:root usr/ /usr/
+chmod +x /usr/local/bin/sway-run
 
 # Change shell to zsh
 chsh -s "/usr/bin/zsh" "${username}"
