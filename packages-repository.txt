@@ -10,7 +10,6 @@ egl-wayland
 file-roller
 fuzzel
 greetd
-greetd-tuigreet
 grim
 gtk-engine-murrine
 gtk-layer-shell
@@ -23,6 +22,7 @@ gvfs-smb
 htop
 jq
 kitty
+ly
 mako
 network-manager-applet
 pamixer

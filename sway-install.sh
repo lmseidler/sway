@@ -24,21 +24,27 @@ chown -R "${username}:${username}" "/home/${username}"
 echo "Deploying system configs..."
 rsync -a --chown=root:root etc/ /etc/
 rsync -a --chown=root:root usr/ /usr/
+
+# Make sway session wrapper script executable
 chmod +x /usr/local/bin/sway-run
 
 # Change shell to zsh
 chsh -s "/usr/bin/zsh" "${username}"
 
 # Check if the script is running in a virtual machine
-if systemd-detect-virt | grep -vq "none"; then
-  echo "Virtual machine detected; enabling WLR_RENDERER_ALLOW_SOFTWARE variable in ReGreet config..."
-  # Uncomment WLR_RENDERER_ALLOW_SOFTWARE variable in ReGreet config
-  sed -i '/^#WLR_RENDERER_ALLOW_SOFTWARE/s/^#//' /etc/greetd/regreet.toml
-fi
+# if systemd-detect-virt | grep -vq "none"; then
+#   echo "Virtual machine detected; enabling WLR_RENDERER_ALLOW_SOFTWARE variable in ReGreet config..."
+#   # Uncomment WLR_RENDERER_ALLOW_SOFTWARE variable in ReGreet config
+#   sed -i '/^#WLR_RENDERER_ALLOW_SOFTWARE/s/^#//' /etc/greetd/regreet.toml
+# fi
 
 # Enable the Greetd service
-echo "Enabling the Greetd service..."
-systemctl -f enable greetd.service
+# NOTE: greetd only installed as fallback
+# echo "Enabling the Greetd service..."
+# systemctl -f enable greetd.service
+
+# Enable ly as login manager
+systemctl -f enable ly.service
 
 # Remove the repo
 echo "Removing the EOS Community Sway repo..."
