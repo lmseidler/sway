@@ -20,8 +20,8 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes false # FIXME: this doesn't seem to work, so false for now, maybe take stuff from omz git lib instead
 zstyle ':vcs_info:git:*' unstagedstr ' *'
 zstyle ':vcs_info:git:*' stagedstr ' +'
-zstyle ':vcs_info:git:*' formats ' [%s::%b%m%u%c]'
-zstyle ':vcs_info:git:*' actionformats ' [%s::%b%m%u%c|%a]'
+zstyle ':vcs_info:git:*' formats ' [%s::%b%u%c]'
+zstyle ':vcs_info:git:*' actionformats ' [%s::%b%u%c|%a]'
 
 setopt prompt_subst
 PS1='%F{red}%B%/%b%f%F{green}${vcs_info_msg_0_}%f %F{white}[%n@%m]%f [%F{white}%T%f]
@@ -35,9 +35,11 @@ alias ni='nvim'
 alias ..="cd .."
 alias ...="cd ../../"
 alias duh="du -hs ./{.,}* | sort -h"
+alias md='mkdir -p'
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin:"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 # Lazy loading conda
