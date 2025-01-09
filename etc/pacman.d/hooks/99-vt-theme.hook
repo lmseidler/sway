@@ -1,0 +1,13 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux
+Target = linux-lts
+Target = linux-zen
+Target = linux-hardened
+
+[Action]
+Description = Add VT color scheme to non-fallback bootloader entries
+When = PostTransaction
+Exec = /usr/local/bin/set-bootloader-vt-colorscheme.sh

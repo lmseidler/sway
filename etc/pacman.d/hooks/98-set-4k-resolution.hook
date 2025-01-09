@@ -1,0 +1,13 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux
+Target = linux-lts
+Target = linux-zen
+Target = linux-hardened
+
+[Action]
+Description = Add video=3840x2160@60 to non-fallback bootloader entries
+When = PostTransaction
+Exec = /usr/local/bin/set-bootloader-resolution.sh
