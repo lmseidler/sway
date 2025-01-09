@@ -28,6 +28,10 @@ rsync -a --chown=root:root usr/ /usr/
 # Make sway session wrapper script executable
 chmod +x /usr/local/bin/sway-run
 
+# Make pacman hooks executable
+chmod +x /usr/local/bin/set-bootloader-resolution.sh
+chmod +x /usr/local/bin/set-bootloader-vt-colorscheme.sh
+
 # Change shell to zsh
 chsh -s "/usr/bin/zsh" "${username}"
 
