@@ -16,11 +16,6 @@ set $launcher fuzzel
 # Power Menu
 set $powermenu ~/.config/sway/scripts/power_menu.sh
 
-### Idle configuration
-exec swayidle idlehint 1
-set $lock swaylock -C ~/.config/swaylock/config
-exec_always swayidle -w before-sleep "$lock"
-
 ### Key bindings
 #
 # Basics:
@@ -38,7 +33,7 @@ exec_always swayidle -w before-sleep "$lock"
     bindsym $mod+d exec $launcher
 
     # Lock screen
-    bindsym $mod+Escape exec $lock
+    bindsym $mod+Escape exec gtklock
 
     # Activities
     bindsym $mod+t exec ~/.config/sway/scripts/window_switcher.sh

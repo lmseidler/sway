@@ -13,6 +13,9 @@ greetd
 grim
 gtk-engine-murrine
 gtk-layer-shell
+gtklock
+gtklock-powerbar-module
+gtklock-userinfo-module
 gvfs
 gvfs-afc
 gvfs-gphoto2
@@ -33,7 +36,6 @@ sway
 swaybg
 sway-contrib
 swayidle
-swaylock
 sysstat
 thunar
 thunar-archive-plugin
