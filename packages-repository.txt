@@ -3,6 +3,7 @@ arc-gtk-theme-eos
 autotiling
 awesome-terminal-fonts
 azote
+brave-bin
 brightnessctl
 cliphist
 easyeffects
