@@ -52,6 +52,5 @@ xdg-desktop-portal-wlr
 xed
 xorg-xwayland
 zsh
-zsh-autocomplete
 zsh-autosuggestions
 zsh-syntax-highlighting
