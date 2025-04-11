@@ -27,6 +27,10 @@ setopt prompt_subst
 PS1='%F{red}%B%/%b%f%F{green}${vcs_info_msg_0_}%f %F{white}[%n@%m]%f [%F{white}%T%f]
 %_> '
 
+# Case-insensitive completion
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
 # Alias
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
