@@ -1,4 +1,5 @@
 acpi
+alacritty
 arc-gtk-theme-eos
 autotiling
 awesome-terminal-fonts
@@ -26,7 +27,6 @@ gvfs-nfs
 gvfs-smb
 htop
 jq
-kitty
 ly
 mako
 network-manager-applet
