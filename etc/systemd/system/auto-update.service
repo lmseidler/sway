@@ -1,0 +1,7 @@
+[Unit]
+Description=Automatic System Update
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/auto-update.sh
+

@@ -50,6 +50,9 @@ chsh -s "/usr/bin/zsh" "${username}"
 # Enable ly as login manager
 systemctl -f enable ly.service
 
+# Enable auto-updates
+systemctl enable auto-update.timer
+
 # Remove the repo
 echo "Removing the EOS Community Sway repo..."
 rm -rf ../sway
