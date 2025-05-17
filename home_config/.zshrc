@@ -31,6 +31,11 @@ PS1='%F{red}%B%/%b%f%F{green}${vcs_info_msg_0_}%f %F{white}[%n@%m]%f [%F{white}%
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
+# Default editor
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
+export SUDO_EDITOR=/usr/bin/nvim
+
 # Alias
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
