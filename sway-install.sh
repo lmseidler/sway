@@ -10,7 +10,7 @@ fi
 
 # Install the custom package list
 echo "Installing needed packages..."
-pacman -S --noconfirm --noprogressbar --needed --disable-download-timeout $(<packages-repository.txt)
+sudo -u "${username}" yay -S --noconfirm $(<packages-repository.txt)
 
 # Deploy user configs
 echo "Deploying user configs..."
