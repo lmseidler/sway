@@ -1,7 +1,10 @@
 [Unit]
 Description=Automatic System Update
+PartOf=graphical-session.target
 
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/auto-update.sh
 
+[Install]
+WantedBy=graphical-session.target

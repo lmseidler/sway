@@ -2,7 +2,7 @@
 Description=Run automatic system update weekly
 
 [Timer]
-OnCalendar=Mon
+OnCalendar=Wed
 Persistent=true
 
 [Install]
