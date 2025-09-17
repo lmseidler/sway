@@ -12,4 +12,5 @@ if status is-interactive
     alias ...='cd ../../'
     alias duh='du -hs ./{.,}* | sort -h'
     alias md='mkdir -p'
+    alias bwl='set -gx BW_SESSION (bw unlock --raw)'
 end
